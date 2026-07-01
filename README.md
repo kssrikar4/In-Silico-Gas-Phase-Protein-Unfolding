@@ -42,7 +42,8 @@ pip install MDAnalysis nglview ipywidgets
    - Render an interactive 3D widget of the unfolding trajectory.
 
 ### 2. View Online (GitHub Pages)
-The notebook is exported to `index.html` and hosted via GitHub Pages for zero-install viewing. 
+The notebook is exported to index.html and hosted via [GitHub Pages](https://kssrikar4.github.io/In-Silico-Gas-Phase-Protein-Unfolding) for zero-install viewing.
+
 *Note: The web version contains pre-computed trajectory data. It cannot execute the GROMACS backend.*
 
 ## Acknowledgements
