@@ -1,0 +1,12 @@
+integrator  = steep
+nsteps      = 5000
+emtol       = 100.0
+nstlog      = 500
+nstxout-compressed = 500
+
+; VACUUM CONSTRAINTS: GROMACS requires pbc=xyz for Verlet lists.
+; We use a large box and set cutoffs < half the box size to prevent self-interaction.
+pbc         = xyz
+coulombtype = cut-off
+rcoulomb    = 5.0   ; Must be smaller than half the smallest box dimension
+rvdw        = 5.0   ; Must be smaller than half the smallest box dimension

@@ -1,0 +1,26 @@
+integrator  = md
+nsteps      = 500000  ; 1 ns (dt=0.002). 
+dt          = 0.002
+nstlog      = 1000
+nstxout-compressed = 5000 ; Save frame every 10 ps
+
+; VACUUM
+pbc         = xyz
+coulombtype = cut-off
+rcoulomb    = 5.0
+rvdw        = 5.0
+
+; TEMPERATURE (Simulated Annealing)
+; Ramps from 300K to 1000K over 1000 ps (1 ns)
+annealing       = single
+annealing-npoints = 2
+annealing-time  = 0 1000
+annealing-temp  = 300 1000
+
+; Thermostat
+tc-grps     = System
+tau-t       = 0.1
+ref-t       = 300  ; Ignored when annealing is active
+
+; Dynamics
+constraints = none  ; Allow full flexibility for unfolding
